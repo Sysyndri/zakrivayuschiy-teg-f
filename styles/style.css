@@ -13,4 +13,120 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main_font, 'Sans Serif');
+  font-weight: var(--font_weight_text, 410);
+  font-size: var(--font_size_text, 18px);
+  color: var(--font_color, #000);
+  background-image: var(--background_gradient);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@supports (font-variation-settings: var(--font_weight_text, 410)) {
+
+  .page {
+    font-variation-settings: var(--font_weight_text, 410);
+  }
+}
+
+.outline {
+  outline: 2px solid currentColor;
+}
+
+.container_size {
+  max-width: var(--width_block, clamp(375px, 260.56px + 30.52vw, 700px));
+  margin: 0 auto;
+}
+
+.main {
+  display: grid;
+  gap: 50px;
+}
+
+.header {
+  margin-block-start: var(--margin_header-footer, 100px);
+  margin-block-end: var(--margin_header-footer, 100px);
+  padding-inline: clamp(16px, -21.68px + 10.05vw, 123px);
+  padding-block: clamp(122px, 119.18px + 0.75vw, 130px);
+  background-color: var(--white, #fff);
+  text-align: center;
+  font-family: var(--variative_font, 'Sans Serif');
+}
+
+.logo {
+  font-size: clamp(49px, 43.37px + 1.5vw, 65px);
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.main-title {
+  font-size: var(--font_size_title, clamp(14px, 10.83px + 0.85vw, 23px));
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-block-start: 20px;
+}
+
+.card {
+  background-color: var(--white, #fff);
+}
+
+.card__title {
+  font-weight: 715;
+  text-wrap: wrap;
+  font-size: 18px;
+  padding-block: 6px;
+  padding-inline: 10px;
+}
+
+.card__image-contain {
+  position: relative;
+}
+
+.card__image {
+  inline-size: 100%;
+  object-fit: contain;
+}
+
+.card__image-decorate {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-family: var(--variative_font, 'Sans Serif');
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.card__contain {
+  display: grid;
+  gap: 25px;
+  margin-block: 25px;
+  margin-inline: 25px;
+}
+
+.card_text {
+  line-height: 117%;
+}
+
+.card__button {
+  display: flex;
+  justify-content: right;
+  padding-inline-end: 25px;
+  margin-block-end: 25px;
+  gap: 12px;
+}
+
+.card__icon-button {
+  background-color: none;
+}
+
+.card__like-button {
+  padding-block: 9px;
+  padding-inline: 17px;
+  text-align: center;
+  outline: 1px solid currentColor;
+  font-family: var(--variative_font, 'Sans Serif');
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 90%;
 }
