@@ -25,7 +25,7 @@
     ),
     repeating-linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
 
-  --width_block: clamp(375px, 260.56px + 30.52vw, 700px);
+  --width_block: clamp(371px, 256.56px + 30.52vw, 696px);
 
   --margin_header-footer: 100px;
 

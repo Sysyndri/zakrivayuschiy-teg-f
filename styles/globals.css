@@ -43,6 +43,7 @@ button {
   box-shadow: none;
   outline: none;
   background: none;
+  cursor: pointer;
 }
 
 ul,
