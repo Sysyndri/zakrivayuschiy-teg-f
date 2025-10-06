@@ -24,10 +24,10 @@
   min-block-size: 100dvb;
 }
 
-@supports (font-variation-settings: var(--font_weight_text, 410)) {
+@supports (font-variation-settings: "wght" var(--font_weight_text, 410)) {
 
   .page {
-    font-variation-settings: var(--font_weight_text, 410);
+    font-variation-settings: "wght" var(--font_weight_text, 410);
   }
 }
 
@@ -261,12 +261,13 @@
   color: var(--white, #fff);
   -webkit-padding-before: 15px;
   -webkit-padding-after: 20px;
+  text-transform: uppercase;
 }
 
 .floppy {
   width: 28px;
   height: 28px;
-  background-color: var(--white, #fff);
+  fill: var(--white, #fff);
   mix-blend-mode: difference;
 }
 
