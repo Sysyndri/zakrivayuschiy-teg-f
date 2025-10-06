@@ -1,1 +1,1 @@
-https://github.com/Sysyndri/slozhno-sosredotochitsya-fd.git
+https://sysyndri.github.io/zakrivayuschiy-teg-f/
