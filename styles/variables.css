@@ -1,6 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
+  /* fonts */
   --main_font: 'Inter';
   --variative_font: 'PressStart';
   --font_weight_text: 410;
@@ -8,27 +9,29 @@
   --font_size_title: clamp(14px, 10.83px + 0.85vw, 23px);
   --font_size_text: 18px;
 
-  --background_gradient:
-    repeating-linear-gradient(
-      to right,
-      #d3d3d3,
-      #d3d3d3 2px,
-      transparent 2px,
-      transparent 4px
-    ),
-    repeating-linear-gradient(
-      to bottom,
-      #d3d3d3,
-      #d3d3d3 2px,
-      transparent 2px,
-      transparent 4px
-    ),
-    repeating-linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
-
+  /* width block and margin */
   --width_block: clamp(371px, 256.56px + 30.52vw, 696px);
-
   --margin_header-footer: 100px;
+
+  /* gradient and color */
+  --background_gradient:
+    repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0 0.01%, #1a1a1a 100%);
 
   --font_color: #000;
   --white: #fff;
+  --accent_color: #000;
+  --countour_color: transparent;
+  --animation-fill-color: #f00;
+
+  /* filters image */
+  --filter_image_mount: blur(3px);
+  --filter_image_monky: brightness(35%);
+  --filter_image_eagle: contrast(75%);
+  --filter_image_duck: grayscale(90%);
+  --filter_image_star: hue-rotate(0.3turn);
+  --filter_image_beaver: saturate(400%);
+  --filter_image_star_mount: saturate(350%) hue-rotate(0.2turn) sepia(0.7)
+    contrast(160%);
 }
