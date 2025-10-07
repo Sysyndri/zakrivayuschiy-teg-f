@@ -24,10 +24,10 @@
   min-block-size: 100dvb;
 }
 
-@supports (font-variation-settings: "wght" var(--font_weight_text, 410)) {
+@supports (font-variation-settings: 'wght' var(--font_weight_text, 410)) {
 
   .page {
-    font-variation-settings: "wght" var(--font_weight_text, 410);
+    font-variation-settings: 'wght' var(--font_weight_text, 410);
   }
 }
 
@@ -83,10 +83,10 @@
   text-wrap: wrap;
 }
 
-@supports (font-variation-settings: "wght" var(--font_weight_title, 715)) {
+@supports (font-variation-settings: 'wght' var(--font_weight_title, 715)) {
 
   .card__title {
-    font-variation-settings: "wght" var(--font_weight_title, 715);
+    font-variation-settings: 'wght' var(--font_weight_title, 715);
   }
 }
 
@@ -98,6 +98,7 @@
   max-height: clamp(371px, 256.56px + 30.52vw, 696px);
   -o-object-fit: cover;
   object-fit: cover;
+  -o-object-position: center;
   object-position: center;
   inline-size: 100%;
   block-size: 100%;
@@ -197,8 +198,8 @@
 
 .card__icon-button {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   padding: 0;
   outline: 2px solid transparent;
   transition: outline 0.3s ease;
@@ -210,7 +211,8 @@
 
 .button {
   position: relative;
-  padding-inline: 35px;
+  width: 100%;
+  max-width: 130px;
   padding-block: 12px;
   outline: 2px solid var(--accent_color, #000);
   color: var(--white, #fff);
@@ -249,39 +251,34 @@
   transform: scaleX(1);
 }
 
-.save_button {
-  max-width: clamp(306px, 295.79px + 2.72vw, 335px);
-  margin-inline: auto;
-  margin-block-start: 54px;
-  margin-block-end: var(--margin_header-footer, 100px);
-  -webkit-margin-before: 54px;
-  -webkit-margin-after: var(--margin_header-footer, 100px);
+.save__button {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 8px;
   width: 100%;
+  max-width: clamp(306px, 295.79px + 2.72vw, 335px);
   margin-inline: inherit;
+  margin-block-end: var(--margin_header-footer, 100px);
   padding-inline: 0;
-  padding-block-start: 15px;
-  padding-block-end: 20px;
+  padding-block: 15px;
   outline: none;
   color: var(--white, #fff);
-  -webkit-padding-before: 15px;
-  -webkit-padding-after: 20px;
   text-transform: uppercase;
+  -webkit-margin-after: var(--margin_header-footer, 100px);
 }
 
 .floppy {
-  width: 28px;
-  height: 28px;
+  width: 13%;
+  height: auto;
   fill: var(--white, #fff);
   mix-blend-mode: difference;
 }
 
 .dialog:open {
   display: grid;
+  justify-items: center;
   gap: 30px;
   max-width: clamp(341px, 336.77px + 1.13vw, 353px);
   padding-inline: 30px;
@@ -291,8 +288,15 @@
 .dialog__content {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
   margin: 0 auto;
+}
+
+.dialog__floppy {
+  flex-shrink: 0;
+  width: 20%;
+  height: auto;
+  fill: var(--accent_color, #000);
 }
 
 .dialog__text {
@@ -316,6 +320,8 @@
 }
 
 .dialog-button {
+  width: 100%;
+  max-width: clamp(261px, 249.73px + 3vw, 293px);
   padding: 9px 10px;
   outline: 2px solid var(--accent_color, #000);
   text-transform: uppercase;
@@ -323,12 +329,14 @@
 
 @media (width >= 1440px) {
 
-  .footer__button {
+  .save__button {
     flex-direction: row;
+    gap: 4px;
   }
 
   .floppy {
-    width: 21px;
-    height: 21px;
+    align-items: center;
+    width: 8%;
+    height: auto;
   }
 }

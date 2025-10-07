@@ -32,6 +32,6 @@
   --filter_grayscale: grayscale(90%);
   --filter_hue-rotate: hue-rotate(0.3turn);
   --filter_saturate: saturate(400%);
-  --filter_saturate_hue-rotate_sepia_contrast: saturate(350%) hue-rotate(0.2turn) sepia(0.7)
-    contrast(160%);
+  --filter_saturate_hue-rotate_sepia_contrast: saturate(350%)
+    hue-rotate(0.2turn) sepia(0.7) contrast(160%);
 }

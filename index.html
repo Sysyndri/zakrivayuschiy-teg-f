@@ -249,7 +249,9 @@
             Второй спринт был достоточно интересным, хотелось сделать все
             идеально, но&nbsp;иделал оказался где то&nbsp;за&nbsp;горами.
           </p>
-          <p class="card_text">Хотя результатом работы я&nbsp;остался доволен.</p>
+          <p class="card_text">
+            Хотя результатом работы я&nbsp;остался доволен.
+          </p>
         </div>
         <div class="card__button-contain">
           <button class="card__icon-button" type="button">
@@ -368,7 +370,7 @@
             class="card__image outline filter-hue-rotate"
             loading="lazy"
             src="./images/sprint_3_1.jpg"
-            alt="Поле, посередине дерево с круглой кроной, сверху звездное небо, 
+            alt="Поле, посередине дерево с круглой кроной, сверху звездное небо,
             которое переливается от черно-фиолетового до зеленого оттенка"
           />
           <span class="card__image-decorate">&lt;/я&gt;</span>
@@ -568,45 +570,48 @@
           </button>
         </div>
       </article>
-        <button
-          class="button save__button"
-          type="button"
-          onclick="window['save-me'].showModal()"
-          aria-controls="save-me"
+      <button
+        class="button save__button"
+        type="button"
+        onclick="window['save-me'].showModal()"
+        aria-controls="save-me"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="39"
+          height="39"
+          viewBox="0 0 39 39"
+          fill="none"
+          class="floppy"
         >
+          <use href="svg/floppy.svg#floppy" />
+        </svg>
+        <span class="button__text save__button-text"
+          >Сохранить на&nbsp;память</span
+        >
+      </button>
+      <dialog class="dialog" id="save-me">
+        <div class="dialog__content">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="39"
             height="39"
             viewBox="0 0 39 39"
             fill="none"
-            class="floppy"
+            class="dialog__floppy"
           >
             <use href="svg/floppy.svg#floppy" />
           </svg>
-          <span class="button__text">Сохранить на&nbsp;память</span>
+          <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
+        </div>
+        <button
+          class="button dialog-button"
+          type="button"
+          onclick="window['save-me'].close()"
+        >
+          <span class="button__text">ок</span>
         </button>
-        <dialog class="dialog" id="save-me">
-          <div class="dialog__content">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="39"
-              height="39"
-              viewBox="0 0 39 39"
-              fill="none"
-            >
-              <use href="svg/floppy.svg#floppy" />
-            </svg>
-            <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
-          </div>
-          <button
-            class="button dialog-button"
-            type="button"
-            onclick="window['save-me'].close()"
-          >
-            <span class="button__text">ок</span>
-          </button>
-        </dialog>
+      </dialog>
     </main>
     <script src="./scripts/like.js"></script>
   </body>
