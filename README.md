@@ -1,1 +1,1 @@
-https://sysyndri.github.io/zakrivayuschiy-teg-f/
+https://github.com/Sysyndri/zakrivayuschiy-teg-f
