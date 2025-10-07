@@ -12,7 +12,7 @@
 
 .page {
   color: var(--font_color, #000);
-  font-family: var(--main_font, 'Sans Serif');
+  font-family: var(--main_font, sans-serif);
   font-weight: var(--font_weight_text, 410);
   font-size: var(--font_size_text, 18px);
   background-color: #fff;
@@ -50,7 +50,7 @@
   margin-block-end: var(--margin_header-footer, 100px);
   padding-inline: clamp(16px, -21.68px + 10.05vw, 123px);
   padding-block: clamp(122px, 119.18px + 0.75vw, 130px);
-  font-family: var(--variative_font, 'Sans Serif');
+  font-family: var(--variative_font, sans-serif);
   text-align: center;
   background-color: var(--white, #fff);
   -webkit-margin-before: var(--margin_header-footer, 100px);
@@ -83,6 +83,13 @@
   text-wrap: wrap;
 }
 
+@supports (font-variation-settings: "wght" var(--font_weight_title, 715)) {
+
+  .card__title {
+    font-variation-settings: "wght" var(--font_weight_title, 715);
+  }
+}
+
 .card__image-contain {
   position: relative;
 }
@@ -91,47 +98,49 @@
   max-height: clamp(371px, 256.56px + 30.52vw, 696px);
   -o-object-fit: cover;
   object-fit: cover;
+  object-position: center;
   inline-size: 100%;
   block-size: 100%;
+  aspect-ratio: 1/1;
 }
 
-.image-mount {
-  -webkit-filter: var(--filter_image_mount, blur(3px));
-  filter: var(--filter_image_mount, blur(3px));
+.filter-blur {
+  -webkit-filter: var(--filter_blur, blur(3px));
+  filter: var(--filter_blur, blur(3px));
 }
 
-.image-monky {
-  -webkit-filter: var(--filter_image_monky, brightness(35%));
-  filter: var(--filter_image_monky, brightness(35%));
+.filter-brightness {
+  -webkit-filter: var(--filter_brightness, brightness(35%));
+  filter: var(--filter_brightness, brightness(35%));
 }
 
-.image-eagle {
-  -webkit-filter: var(--filter_image_eagle, contrast(75%));
-  filter: var(--filter_image_eagle, contrast(75%));
+.filter-contrast {
+  -webkit-filter: var(--filter_contrast, contrast(75%));
+  filter: var(--filter_contrast, contrast(75%));
 }
 
-.image-duck {
-  -webkit-filter: var(--filter_image_duck, grayscale(90%));
-  filter: var(--filter_image_duck, grayscale(90%));
+.filter-grayscale {
+  -webkit-filter: var(--filter_grayscale, grayscale(90%));
+  filter: var(--filter_grayscale, grayscale(90%));
 }
 
-.image-star {
-  -webkit-filter: var(--filter_image_star, hue-rotate(0.1turn));
-  filter: var(--filter_image_star, hue-rotate(0.1turn));
+.filter-hue-rotate {
+  -webkit-filter: var(--filter_hue-rotate, hue-rotate(0.1turn));
+  filter: var(--filter_hue-rotate, hue-rotate(0.1turn));
 }
 
-.image-beaver {
-  -webkit-filter: var(--filter_image_beaver, saturate(400%));
-  filter: var(--filter_image_beaver, saturate(400%));
+.filter-saturate {
+  -webkit-filter: var(--filter_saturate, saturate(400%));
+  filter: var(--filter_saturate, saturate(400%));
 }
 
-.image-star-mount {
+.filter-saturate-hue-rotate-sepia-contrast {
   -webkit-filter: var(
-    --filter_image_star_mount,
+    --filter_saturate_hue-rotate_sepia_contrast,
     saturate(350%) hue-rotate(0.2turn) sepia(0.7) contrast(160%)
   );
   filter: var(
-    --filter_image_star_mount,
+    --filter_saturate_hue-rotate_sepia_contrast,
     saturate(350%) hue-rotate(0.2turn) sepia(0.7) contrast(160%)
   );
 }
@@ -141,7 +150,7 @@
   top: 25px;
   right: 25px;
   opacity: 0.5;
-  font-family: var(--variative_font, 'Sans Serif');
+  font-family: var(--variative_font, sans-serif);
   font-weight: normal;
   font-size: 14px;
   text-transform: uppercase;
@@ -187,6 +196,9 @@
 }
 
 .card__icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0;
   outline: 2px solid transparent;
   transition: outline 0.3s ease;
@@ -202,7 +214,7 @@
   padding-block: 12px;
   outline: 2px solid var(--accent_color, #000);
   color: var(--white, #fff);
-  font-family: var(--variative_font, 'Sans Serif');
+  font-family: var(--variative_font, sans-serif);
   font-weight: normal;
   font-size: 14px;
   line-height: 90%;
@@ -237,16 +249,13 @@
   transform: scaleX(1);
 }
 
-.footer {
+.save_button {
   max-width: clamp(306px, 295.79px + 2.72vw, 335px);
   margin-inline: auto;
   margin-block-start: 54px;
   margin-block-end: var(--margin_header-footer, 100px);
   -webkit-margin-before: 54px;
   -webkit-margin-after: var(--margin_header-footer, 100px);
-}
-
-.footer__button {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -286,10 +295,10 @@
   margin: 0 auto;
 }
 
-.dialog__content > .button__text {
+.dialog__text {
   max-width: 234px;
-  color: var(--white, #fff);
-  font-family: var(--variative_font, 'Sans Serif');
+  color: var(--font_color, #000);
+  font-family: var(--variative_font, sans-serif);
   font-weight: normal;
   font-size: 14px;
   line-height: 150%;

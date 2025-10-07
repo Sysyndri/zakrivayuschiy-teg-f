@@ -26,12 +26,12 @@
   --animation-fill-color: #f00;
 
   /* filters image */
-  --filter_image_mount: blur(3px);
-  --filter_image_monky: brightness(35%);
-  --filter_image_eagle: contrast(75%);
-  --filter_image_duck: grayscale(90%);
-  --filter_image_star: hue-rotate(0.3turn);
-  --filter_image_beaver: saturate(400%);
-  --filter_image_star_mount: saturate(350%) hue-rotate(0.2turn) sepia(0.7)
+  --filter_blur: blur(3px);
+  --filter_brightness: brightness(35%);
+  --filter_contrast: contrast(75%);
+  --filter_grayscale: grayscale(90%);
+  --filter_hue-rotate: hue-rotate(0.3turn);
+  --filter_saturate: saturate(400%);
+  --filter_saturate_hue-rotate_sepia_contrast: saturate(350%) hue-rotate(0.2turn) sepia(0.7)
     contrast(160%);
 }
