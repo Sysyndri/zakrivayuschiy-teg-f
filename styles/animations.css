@@ -17,7 +17,7 @@
   }
 
   to {
-    transform: scale(1.25) translateX(-7%);
+    transform: scale(1.25);
   }
 }
 
@@ -86,6 +86,7 @@
 .like-icon.is-liked .core,
 .like-icon.is-liked .main-body,
 .like-icon.is-liked .contour {
+  transform-origin: 50% 50%;
   animation: scaling 0.3s ease-in 0.1s;
 }
 
