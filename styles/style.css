@@ -294,7 +294,7 @@
   flex-shrink: 0;
   width: 50px;
   height: auto;
-          margin-block-start: 10px;
+  margin-block-start: 10px;
   fill: var(--accent_color, #000);
   -webkit-margin-before: 10px;
 }
@@ -332,14 +332,14 @@
   .save__button {
     flex-direction: row;
     gap: 4px;
-            padding-block-end: 10px;
+    padding-block-end: 10px;
     -webkit-padding-after: 10px;
   }
 
   .floppy {
     width: 25px;
     height: auto;
-            margin-block-start: 2px;
+    margin-block-start: 2px;
     -webkit-margin-before: 2px;
   }
 }
